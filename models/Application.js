@@ -14,8 +14,11 @@ const applicationSchema = mongoose.Schema({
     required: true,
   },
   resume: {
-    type: String, // Path to the uploaded file
+    type: String, // URL to the uploaded file on Cloudinary
     required: true,
+  },
+  resumePublicId: {
+    type: String, // Cloudinary Public ID for deletion
   },
   status: {
     type: String,

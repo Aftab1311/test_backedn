@@ -31,11 +31,11 @@ app.use("/health", (req, res) => res.send("OK server running....")); // Health c
 // Seed Admin User if not exists
 const seedAdmin = async () => {
   try {
-    const adminExists = await User.findOne({ email: 'admin@sumpro.com' });
+    const adminExists = await User.findOne({ email: 'admin@sumpro.in' });
     if (!adminExists) {
       const user = await User.create({
         name: 'SumPro Admin',
-        email: 'admin@sumpro.com',
+        email: 'admin@sumpro.in',
         password: 'admin123', // Will be hashed by pre-save hook
         isAdmin: true,
       });
